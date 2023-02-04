@@ -1,0 +1,3 @@
+Linguagens que temos :
+Html e css,JavaScript,Sass e txt
+Carregar o Sass é sass --watch style.scss:style.css
