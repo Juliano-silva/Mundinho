@@ -1,5 +1,38 @@
 // *Baixo* Copiar para Carregar
 // sass --watch style.scss:style.css
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
-    background: red($color: #000000);
+    background: #252525;
+    color: white;
+}
+#Header{
+    border: 0.1vh solid transparent;
+    text-align: center;
+}
+#Header > h1{
+    font-size: 5vh;
+}
+#Sidebar{
+    position: absolute;
+    top: 0;
+    border: 0.1vh solid red;
+    width: 9.9%;
+}
+#Sidebar > a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 4vh;
+    word-break: break-all;
+}
+#ROTA{
+    display: block;
+    border: 0.1vh solid tomato;
+    margin: auto;
+    width: 80%;
+    height: 100vh;
+    background-image: linear-gradient(#9a2f43,#acb6e5);
 }
