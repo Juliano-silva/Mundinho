@@ -8,6 +8,10 @@ body {
   color: white;
 }
 
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
 #Header {
   border: 0.1vh solid transparent;
   text-align: center;
@@ -22,6 +26,7 @@ body {
   top: 0;
   border: 0.1vh solid red;
   width: 9.9%;
+  display: none;
 }
 
 #Sidebar > a {
@@ -34,11 +39,41 @@ body {
 
 #ROTA {
   display: block;
-  border: 0.1vh solid tomato;
   margin: auto;
-  width: 80%;
+  width: 100%;
   height: 100vh;
   background-image: linear-gradient(#9a2f43, #acb6e5);
+}
+
+#MenuICone, #MenuICone1 {
+  border: 2px solid transparent;
+  height: 10vh;
+  display: none;
+}
+
+#MenuICone1 {
+  display: block;
+}
+
+#MenuICone > span, #MenuICone1 > span {
+  display: block;
+  margin: auto;
+  border: 2px solid red;
+  margin-top: 2vh;
+  width: 10vh;
+  border-radius: 2vh;
+}
+
+#MenuICone1 {
+  border: 2px solid transparent;
+  width: 10%;
+  position: absolute;
+  top: 0;
+  height: 5vh;
+}
+
+#MenuICone1 > span {
+  margin-top: 1vh;
 }
 
 /*# sourceMappingURL=style.css.map */
