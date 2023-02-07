@@ -1,0 +1,53 @@
+*{
+  margin: auto;
+  padding: 0;
+  color: white;
+}
+#Corpo1, #Corpo2, #Corpo3, #Corpo4, #Corpo5, #Corpo6, #Corpo7, #Corpo8 {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#Corpo1 {
+  background-image: url("../Arquivos/Background/1.gif");
+}
+
+#Corpo2 {
+  background-image: url("../Arquivos/Background/2.gif");
+}
+
+#Corpo3 {
+  background-image: url("../Arquivos/Background/3.gif");
+}
+
+#Corpo4 {
+  background-image: url("../Arquivos/Background/4.jpg");
+}
+
+#Corpo5 {
+  background-image: url("../Arquivos/Background/5.gif");
+}
+
+#Corpo6 {
+  background-image: url("../Arquivos/Background/6.jpg");
+}
+
+#Corpo7 {
+  background-image: url("../Arquivos/Background/7.jpg");
+}
+
+#Corpo8 {
+  background-image: url("../Arquivos/Background/8.jpg");
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+#Cor{
+  opacity: 0.8;
+  text-align: center;
+}
+/*# sourceMappingURL=EstiloInterno.css.map */

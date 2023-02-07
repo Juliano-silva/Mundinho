@@ -1,15 +1,12 @@
 * {
   margin: 0;
   padding: 0;
+  color: white;
 }
 
 body {
   background: #252525;
   color: white;
-}
-
-body::-webkit-scrollbar {
-  width: 0px;
 }
 
 #Header {
@@ -42,7 +39,6 @@ body::-webkit-scrollbar {
   margin: auto;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(#9a2f43, #acb6e5);
 }
 
 #MenuICone, #MenuICone1 {
@@ -77,3 +73,6 @@ body::-webkit-scrollbar {
 }
 
 /*# sourceMappingURL=style.css.map */
+::-webkit-scrollbar {
+  display: none;
+}

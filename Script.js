@@ -83,3 +83,33 @@ function Sair(){
     Rota.style.width = "100%"
     Rota.style.marginLeft = "0%"
 }
+// Random
+// Random com Cor
+function Random(tamanho){
+    var Primeiro = "#"
+    var caracteres = 'ABCDEF0123456789';
+    for(var i = 0;i < tamanho; i++){
+        Primeiro += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+    }
+    return Primeiro
+}
+// Random com Image
+function RandomImage(tamanho){
+    HttpPri = "https://wallpapercave.com/wp/wp"
+    var caracteres = "0123456789"
+    for(var i = 0;i < tamanho; i++){
+        HttpPri += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+    }
+    return HttpPri
+}
+function Cores(){
+document.getElementById("Cor").style.background = (Random(6))
+}
+function Image(){
+    const GerarImg = (RandomImage(7))
+    document.getElementById("Image").src = GerarImg + ".jpg"
+    console.log(GerarImg + ".jpg")
+}
+function Copiar(){
+    navigator.clipboard.writeText(CorRandom(6))
+}
