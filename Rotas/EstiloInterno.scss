@@ -1,20 +1,380 @@
-#Corpo1,#Corpo2,#Corpo3,#Corpo4,#Corpo5,#Corpo6,#Corpo7,#Corpo8{
+// sass --watch EstiloInterno.scss:EstiloInterno.css
+@font-face {
+    font-family: "Pokemon";
+    src: url("../Arquivos/Background/Font/PokemonSolid.ttf") format('truetype');
+}
+@font-face {
+    font-family: "Digimon";
+    src: url("../Arquivos/Background/Font/DigimonBasic.ttf") format('truetype');
+}
+#Corpo1,#Corpo2,#Corpo3,#Corpo4,#Corpo5,#Corpo6,#Corpo7,#Corpo8,#Corpo9,#Corpo10,#Corpo11{
     box-sizing: border-box;
     display: block;
     width: 100%;
     height: 100vh;
     border: 2px solid transparent;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    background-attachment: fixed;
+    overflow: auto;
+}
+ul{
+    list-style: none;
+}
+input{
+    all: unset;
+    display: block;
+}
+::placeholder{
+    color: white;
+}
+button{
+    all: unset;
+    display: block;
+    cursor: pointer;
 }
 #Corpo1{background-image: url("../Arquivos/Background/1.gif");}
 #Corpo2{background-image: url("../Arquivos/Background/2.gif");}
-#Corpo3{background-image: url("../Arquivos/Background/3.gif");}
+#Corpo3{background-image: url("../Arquivos/Background/Digimon.png");}
 #Corpo4{background-image: url("../Arquivos/Background/4.jpg");}
 #Corpo5{background-image: url("../Arquivos/Background/5.gif");}
 #Corpo6{background-image: url("../Arquivos/Background/6.jpg");}
-#Corpo7{background-image: url("../Arquivos/Background/7.jpg");}
+#Corpo7{background-image: url("../Arquivos/Background/Pokemon.jpg");}
 #Corpo8{background-image: url("../Arquivos/Background/8.jpg");}
+#Corpo9{background-image: url("../Arquivos/Background/Digimon.png");}
+#Corpo11{background-image: url("../Arquivos/Background/9.jpg");}
+#Corpo10{background-image: url("../Arquivos/Background/10.gif");}
 ::-webkit-scrollbar{
     display: none;
+}
+// API
+#BodyApi{
+    border: 0.7vh solid salmon;
+    width: 96%;
+    display: block;
+    margin: auto;
+    border-radius: 2vh;
+    margin-top: 20vh;
+    background: linear-gradient(135deg , rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(1vh);
+    -webkit-backdrop-filter: blur(1vh);
+}
+#BodyApi > input{
+    border: 0.6vh solid steelblue;
+    background: rgb(112, 184, 243);
+    margin: auto;
+    border-radius: 2vh;
+    color: white;
+    width: 80%;
+    font-size: 4vh;
+}
+#BodyApi > h1{
+    text-align: center;
+    color: white;
+    font-size: 6vh;
+    text-transform: uppercase;
+    height: 5vh;
+}
+#Coisa{
+    border: 0.8vh solid snow;
+    border-radius: 0 0 1vh 1vh;
+    margin-top: 2vh;
+}
+#Coisa > h1{
+    text-align: center;
+    color: aliceblue;
+    word-wrap: break-word;
+    width: 80%;
+    border: 0.2vh solid royalblue;
+    margin: auto;
+    margin-top: 2vh;
+    border-radius: 1vh;
+    background: rgb(22, 93, 160);
+}
+#BodyApi > button{
+    text-align: center;
+    border: 0.6vh solid slategray;
+    display: block;
+    margin: auto;
+    margin-top: 2vh;
+    width: 20vh;
+    font-size: 2vh;
+    border-radius: 2vh;
+    color: white;
+
+}
+// Falar
+#Corpo9{
+    border: 2px solid snow;
+}
+.FalarBody{
+    border: 0.8vh solid rgb(255, 255, 62);
+    text-align: center;
+    margin: auto;
+    width: 65%;
+    margin-top: 35vh;
+    background: linear-gradient(135deg , rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(1vh);
+    -webkit-backdrop-filter: blur(1vh);
+    border-radius: 2vh;
+}
+.FalarBody > h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5vh;
+    color: black;
+    text-shadow: 0.2vh 0.2vh 0.2vh springgreen;
+}
+.FalarBody > input{
+    margin: auto;
+    color: white;
+    margin-top: 2vh;
+    border-radius: 2vh;
+    border: 0.5vh solid springgreen;
+    background: rgb(4, 66, 35);
+    font-size: 6vh;
+}
+.FalarBody > button{
+    all: unset;
+    margin-top: 2.5vh;
+    width: 20vh;
+    border-radius: 2vh;
+    font-size: 5vh;
+    text-align: center;
+    border: 0.5vh solid rgb(18, 78, 48);
+    cursor: pointer;
+    background: azure;
+}
+.FalarBody > button:hover{
+    filter: invert(1);
+}
+.FalarBody > input::placeholder{
+    color: white;
+}
+// Digimon
+#CardDigimon{
+    border: 2px solid black;
+    width: 35vh;
+    display: inline-table;
+    margin-top: 2vh;
+    margin-left: 2vh;
+    background-image: url("../Arquivos/Background/Digimon.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#DigiImg{
+    display: block;
+    width: 100%;
+    height: 40vh;
+    margin: auto;
+}
+#Digiid,#DigimonName,#DigimonX,#DigimonData{
+    text-align: center;
+    margin-top: 2vh;
+    font-family: 'Digimon';
+    color: orange;
+    text-shadow: 0.4vh 0.4vh 0.4vh black;
+    font-size: 3vh;
+}
+// Pedra
+#Papel{
+    border: 1vh solid skyblue;
+    width: 80%;
+    margin: auto;
+    margin-top: 25vh;
+    border-radius: 2vh;
+    background: linear-gradient(135deg , rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(1vh);
+    -webkit-backdrop-filter: blur(1vh);
+}
+#Papel > select{
+    all: unset;
+    margin: auto;
+    display: block;
+    font-size: 10vh;
+    color: whitesmoke;
+    font-size: 7vh;
+}
+#Papel > button{
+    display: block;
+    border: 0.4vh solid snow;
+    color: aquamarine;
+    margin: auto;
+    cursor: pointer;
+    width: 20vh;
+    font-size: 4vh;
+    text-align: center;
+    border-radius: 2vh;
+    background: cadetblue;
+    margin-top: 2vh;
+}
+#Papel > button:hover{
+    filter: invert(1);
+}
+#Papel > h1{
+    color: white;
+    text-align: center;
+    font-size: 3vh;
+    margin-top: 2vh;
+}
+// Principal
+#Corpo5 > h1{
+    text-align: center;
+    color: white;
+    font-size: 10vh;
+    text-shadow: 0.3vh 0.3vh 0.3vh teal;
+}
+#Corpo5 > img{
+    display: block;
+    margin: auto;
+    width: 40vh;
+    height: 35vh;
+}
+#Corpo5 > p{
+    color: snow;
+    font-size: 8vh;
+    text-align: center;
+    text-shadow: 0.3vh 0.3vh 0.3vh teal;
+}
+// Random
+#RandomBody{
+    border: 1vh solid sandybrown;
+    border-radius: 2vh;
+    background: linear-gradient(135deg , rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(1vh);
+    -webkit-backdrop-filter: blur(1vh);
+    width: 80%;
+    margin: auto;
+    margin-top: 25vh;
+}
+#RandomBody > h1{
+    color: white;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10vh;
+}
+#RandomBody > button{
+    border-radius: 2vh;
+    border: 0.5vh solid snow;
+    margin: auto;
+    margin-top: 2vh;
+    text-align: center;
+    width: 30vh;
+    font-size: 4vh;
+    background: violet;
+}
+#RandomBody > h2{
+    text-align: center;
+    width: 20%;
+    font-size: 4vh;
+    border-radius: 2vh;
+    margin: auto;
+    margin-top: 4vh;
+    text-align: center;
+}
+#RandomBody > button:hover{
+    filter: invert(1);
+}
+#ImageRandom{
+    display: block;
+    border: 0.8vh solid snow;
+    height: 60vh;
+    margin: auto;
+    border-radius: 10vh 0 10vh 0;
+    margin-top: 2vh;
+}
+// Roleta
+// Vírus
+#Corpo8 > h1{
+    font-size: 16vh;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    text-shadow: 0.4vh 0.4vh 0.4vh orangered;
+}
+#Corpo8 > a{
+    display: block;
+    margin: auto;
+    border: 0.8vh solid snow;
+    width: 70vh;
+    text-align: center;
+    border-radius: 6vh;
+    font-size: 10vh;
+    background: purple;
+    color: white;
+    text-decoration: none;
+}
+#Corpo8 > a:hover{
+    filter: invert(1);
+}
+// Texto
+#CorpoTexto{
+    border: 1vh solid thistle;
+    text-align: center;
+    background: linear-gradient(135deg , rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(1vh);
+    -webkit-backdrop-filter: blur(1vh);
+    width: 80%;
+    margin: auto;
+    margin-top: 15vh;
+    border-radius: 2vh;
+}
+#CorpoTexto > button{
+    text-align: center;
+    margin: auto;
+    margin-top: 2vh;
+    color: white;
+    border-radius: 2vh;
+    width: 20%;
+    border: 0.7vh solid greenyellow;
+    background: green;
+    font-size: 4vh;
+}
+#CorpoTexto > button:hover{
+    filter: invert(1);
+}
+#CorpoTexto > input::placeholder{
+color: black;}
+#CorpoTexto > input{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    font-size: 3vh;
+    margin-top: 2vh;
+    border: 1vh solid snow;
+    background-color: rgb(255, 210, 210);
+    color: black;
+    border-radius: 2vh;
+    width: 80%;
+}
+#CorpoTexto > h1{
+    text-align: center;
+    color: white;
+    font-size: 4vh;
+}
+// Pokedex
+#pokedex{
+    border: 1vh solid snow;
+    border-radius: 2vh;
+    display: inline-table;
+    margin: auto;
+    margin-top: 2vh;
+    margin-left: 0.2vh;
+    background-image: url("../Arquivos/Background/CelularPokemon.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25vh;
+    height: 30vh;
+}
+#imagePokemon{
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+#idPK,#Type,#NomePoke{
+    color: snow;
+    text-align: center;
+    font-size: 3.2vh;
+    color: yellow;
+    text-shadow: 0.4vh 0.4vh 0.4vh blue;
+    font-family: 'Pokemon';
 }

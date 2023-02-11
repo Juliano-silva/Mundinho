@@ -9,29 +9,18 @@
 </head>
 <body>
     <div id="Corpo6">
-       <h1>Random</h1>
-       <h1>Tá na Hora de Girar a cor</h1>
+        <div id="RandomBody">
+       <h1>Girar a Cor ou Imagem</h1>
        <button onclick="Cores()">Girar a Cor</button>
        <button onclick="Image()">Girar a Imagem</button>
-       <button onclick="Copiar()">Copy Cor</button>
-       <h2 id="Cor">CORES</h2>
-       <img id="Image" alt="">
+       <button onclick="Copiar()">Copiar Cor</button>
+       <h2 id="Cor">COR</h2>
+       <img id="ImageRandom" alt="">
        <iframe id="Iframe" frameborder="0"></iframe>
+    </div>
+    <BR></BR>
     </div>
 </body>
 <script src="../Script.js">
-</script>
-<script>
-        const Gerar1 = RandomGradient(6);
-    const Gerar2 = RandomGradient(6);
-    const Gerar3 = RandomGradient(6);
-function RandomGradient(tamanho){
-    Cores = "#"
-    var caracteres = 'ABCDEF0123456789';
-    for(var i = 0;i < tamanho; i++){
-        Cores += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
-    }
-    return Cores
-}
 </script>
 </html>

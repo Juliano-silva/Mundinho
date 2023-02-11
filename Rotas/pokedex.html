@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="EstiloInterno.css">
+</head>
+<body>
+    <div id="Corpo7">
+        <ul data-js="pokedex" class="Container"></ul>
+    </div>
+</body>
+<script>
+    const fetchPokemon = () => {
+    const getPokemonUrl = id => `https://pokeapi.co/api/v2/pokemon/${id}`
+    const pokemonPromises = []
+    for (let i = 1; i <=1008 ; i++){
+    pokemonPromises.push(fetch(getPokemonUrl(i)).then(response => response.json()))
+    }
+    Promise.all(pokemonPromises)
+    .then(pokemons => {
+    const lisPokemons = pokemons.reduce((accumulator,pokemon) => {
+      const types = pokemon.types.map(typeInfo => typeInfo.type.name)
+        accumulator +=
+        `
+        <div id="pokedex">
+        <li>
+        <img id="imagePokemon"
+        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" />
+        <li id="idPK">Nº${pokemon.id}</id>
+        <li id="NomePoke">${pokemon.name}</li>
+        <li id="Type">${types.join(' / ')}</li>
+        </li>
+        </div>
+        `
+        return accumulator
+    },'')
+    const ul = document.querySelector('[data-js="pokedex"]')
+    ul.innerHTML = lisPokemons
+})
+}
+fetchPokemon()
+</script>
+</html>

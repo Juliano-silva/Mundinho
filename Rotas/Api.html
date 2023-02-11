@@ -9,7 +9,40 @@
 </head>
 <body>
     <div id="Corpo1">
-        <h1>Api</h1>
-    </div>
+        <div id="BodyApi">
+            <h1>Diário</h1>
+            <input type="text" name="texto" id="Texto" placeholder="Escreva Algo">
+            <button id="Salvar">Salvar</button>
+            <button id="Limpar" onclick="Limpar()">Limpar</button>
+            <div id="Coisa">
+            </div>
+            <br>
+        </div>
+</div>
 </body>
+<script>
+    var SalvarBtn = document.getElementById("Salvar")
+SalvarBtn.addEventListener("click",Salvar)
+var array = [];
+function Salvar(){
+    if (localStorage.Nota){
+    array = JSON.parse(localStorage.getItem('Nota'));
+    }
+    let NewArray = document.getElementById("Texto").value;
+    array.push(NewArray);
+    localStorage.Nota = JSON.stringify(array)
+    let Corpo = document.getElementById("Coisa")
+    Corpo.innerHTML = ""
+    for(var i in array){
+        let p = document.createElement("h1");
+        p.innerHTML = array[i];
+        Corpo.append(p)
+    }
+}
+function Limpar(){
+    localStorage.clear()
+}
+
+
+</script>
 </html>

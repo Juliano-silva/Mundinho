@@ -5,8 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="EstiloInterno.css">
 </head>
 <body>
-    <h1>FALAR</h1>
+    <div id="Corpo11">
+        <div class="FalarBody">
+            <h1>Escreva Algo Para o Bot falar</h1>
+                <input type="text" name="text" id="InputText" placeholder="Digite aqui o texto">
+                <input type="text" name="Tradução" id="Tradução" placeholder="Digite a tradução">
+            <button id="convert">Falar</button>
+        </div>
+    </div>
 </body>
+<script>
+var convert = document.getElementById("convert"),
+speech = document.getElementById("InputText"),
+Tradução = document.getElementById("Tradução").value
+count = 1;
+convert.addEventListener('click',function(){
+    if(!speechSynthesis.speaking||speechSynthesis.pause()){
+        speechText = speech.value;
+        var speechVoice = new SpeechSynthesisUtterance();
+        var voices = speechSynthesis.getVoices();
+        speechVoice.voice = voices[2];
+        speechVoice.text = speechText;
+        speechVoice.lang = Tradução;
+        speechSynthesis.speak(speechVoice);
+    }
+}
+)
+
+</script>
 </html>

@@ -3,11 +3,12 @@
   padding: 0;
   color: white;
 }
-
 body {
-  background: #252525;
+  background: #96aebb;
   color: white;
 }
+
+
 
 #Header {
   border: 0.1vh solid transparent;
@@ -16,14 +17,28 @@ body {
 
 #Header > h1 {
   font-size: 5vh;
+  color: rgb(199, 199, 5);
+  text-shadow: 0.2vh 0.2vh 0.2vh #96aebb;
+}
+i > img{
+  position: absolute;
+  top: 0;
+  margin-top: 0.8vh;
+  margin-left: 12vh;
+  width: 5vh;
 }
 
 #Sidebar {
   position: absolute;
   top: 0;
-  border: 0.1vh solid red;
+  border: 0.1vh solid transparent;
+  background-image: url("https://tse1.mm.bing.net/th?id=OIP.0j8_RJvyjc2hi3orTnKqPwHaNL&pid=Api&P=0");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
   width: 9.9%;
   display: none;
+  height: 100vw;
 }
 
 #Sidebar > a {
@@ -32,19 +47,19 @@ body {
   text-align: center;
   font-size: 4vh;
   word-break: break-all;
+  margin-top: 2vh;
 }
 
 #ROTA {
   display: block;
   margin: auto;
-  width: 100%;
   height: 100vh;
+  width: 100vw;
 }
-
 #MenuICone, #MenuICone1 {
   border: 2px solid transparent;
   height: 10vh;
-  display: none;
+  display: block;
 }
 
 #MenuICone1 {
@@ -54,7 +69,7 @@ body {
 #MenuICone > span, #MenuICone1 > span {
   display: block;
   margin: auto;
-  border: 2px solid red;
+  border: 0.4vh solid red;
   margin-top: 2vh;
   width: 10vh;
   border-radius: 2vh;
@@ -71,7 +86,33 @@ body {
 #MenuICone1 > span {
   margin-top: 1vh;
 }
+/* Código de Dark Theme não foi feito por min */
+input[type="checkbox"] {
+  display: none;
+}
 
+.bi {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.bi-moon {
+  display: none;
+}
+
+/* Dark theme */
+.dark{
+  background-color: #263238;
+  color: #fff;
+}
+
+.dark .bi-sun {
+  display: none;
+}
+
+.dark .bi-moon {
+  display: block;
+}
 /*# sourceMappingURL=style.css.map */
 ::-webkit-scrollbar {
   display: none;

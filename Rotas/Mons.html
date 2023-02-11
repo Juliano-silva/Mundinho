@@ -9,7 +9,37 @@
 </head>
 <body>
     <div id="Corpo3">
-        <h1>Digimon é melhor que pokemon</h1>
+            <ul data-js="digimon" class="Container"></ul>
+    </div>
     </div>
 </body>
+<script>
+// Digimon
+const fetchDigimon = () => {
+const getDigimonUrl = id => `https://digimon-api.com/api/v1/digimon/${id}`
+const DigimonPromises = []
+for (let i=1;i<=1422 ;i++){
+    DigimonPromises.push(fetch(getDigimonUrl(i)).then(response => response.json()))
+}
+Promise.all(DigimonPromises)
+.then(pokemons => {
+const lisPokemons = pokemons.reduce((accumulator,digimon) => {
+    accumulator +=
+    `
+    <div id="CardDigimon">
+      <img id="DigiImg" src="https://digimon-api.com/images/digimon/w/${digimon.name.replace(/ /g, '_')}.png" />
+    <li id="Digiid">Nº${digimon.id}</id>
+    <li id="DigimonName">${digimon.name}</li>
+    <li id="DigimonX">Anti Corpo X:${digimon.xAntibody}</li>
+    <li id="DigimonData">Data do Digimon: ${digimon.releaseDate}</li>
+    </div>
+    `
+    return accumulator
+},'')
+const ul = document.querySelector('[data-js="digimon"]')
+ul.innerHTML = lisPokemons
+})
+}
+fetchDigimon()
+</script>
 </html>
